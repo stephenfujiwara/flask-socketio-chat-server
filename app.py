@@ -6,6 +6,14 @@ app = Flask(__name__)
 CORS(app)
 socketio = SocketIO(app, cors_allowed_origins="https://stephenfujiwara-chat-client.netlify.app")
 
+@app.route("/")
+def home():
+    return "Home route"
+
+@app.route("chat")
+def chat():
+    return "Chat route"
+
 @socketio.on("connect", namespace="/chat")
 def handle_connection():
     print("someone has connected")
