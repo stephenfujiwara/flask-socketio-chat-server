@@ -4,7 +4,7 @@ from flask_socketio import SocketIO, join_room
 
 app = Flask(__name__)
 CORS(app)
-socketio = SocketIO(app, cors_allowed_origins="http://localhost:5173")
+socketio = SocketIO(app, cors_allowed_origins="https://stephenfujiwara-chat-client.netlify.app")
 
 @socketio.on("connect", namespace="/chat")
 def handle_connection():
