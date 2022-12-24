@@ -10,7 +10,7 @@ socketio = SocketIO(app, cors_allowed_origins="https://stephenfujiwara-chat-clie
 def home():
     return "Home route"
 
-@app.route("chat")
+@app.route("/chat")
 def chat():
     return "Chat route"
 
